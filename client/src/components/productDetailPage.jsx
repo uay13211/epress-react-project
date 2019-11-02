@@ -85,10 +85,10 @@ export function ProductDetailPage(props){
                            : <button onClick={handleDecrement} className="btn btn-sm btn-warning mr-3">-</button>}
                 <span className='my-3 count-number'>{count}</span>
                 <button onClick={handleIncrement} className="btn btn-sm btn-warning m-3">+</button>
-                {count===0 ? <button className="btn btn-sm btn-secondary" disabled><i className="fas fa-cart-plus mx-2"></i>Add To Cart</button>
-                           : <button onClick={()=>handleAddToCart(props.match.params.id, count, product.price)} className="btn btn-sm btn-warning"><i className="fas fa-cart-plus mx-2"></i>Add To Cart</button>}
-                <a href={updateLink} className="btn btn-sm btn-warning m-3"><i className="fas fa-pen mx-2"></i>Change</a>
-                <button className="btn btn-sm btn-danger" onClick={deleteProduct}><i className="fas fa-trash-alt mx-2"></i>Delete</button>
+                {count===0 ? <button className="btn btn-sm btn-secondary" disabled><i className="fas fa-cart-plus mr-2"></i>Add To Cart</button>
+                           : <button onClick={()=>handleAddToCart(props.match.params.id, count, product.price)} className="btn btn-sm btn-warning"><i className="fas fa-cart-plus mr-2"></i>Add To Cart</button>}
+                <a href={updateLink} className="btn btn-sm btn-warning m-3"><i className="fas fa-pen mr-2"></i>Change</a>
+                <button className="btn btn-sm btn-danger" onClick={deleteProduct}><i className="fas fa-trash-alt mr-2"></i>Delete</button>
                 <br/>
                 <p className="mt-3">{product.description}</p>
             </div>
