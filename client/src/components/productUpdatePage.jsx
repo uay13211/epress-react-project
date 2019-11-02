@@ -102,7 +102,7 @@ export function ProductUpdatePage(props){
               <label>Description</label>
               <textarea rows="6" className="form-control" name="description" value={product.description} onChange={onChangeData} placeholder="Descripte the product" />
             </div>
-            <button type="submit" className="btn btn-block btn-warning mb-3"><i class="fas fa-pen fa-lg"></i>Update</button>
+            <button type="submit" className="btn btn-block btn-warning mb-3"><i className="fas fa-pen fa-lg mx-2"></i>Update</button>
         </form>
         </div>
       </div>
