@@ -107,6 +107,18 @@ div.login-form {
 }
 
 /* product detail page */
+.detail-img-section{
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+..detail-img-inner-section{
+  height: 80%;
+}
+.detail-img-section img{
+  object-fit: cover;
+}
 .detail-page p{
   line-height: 1.8rem;
 }

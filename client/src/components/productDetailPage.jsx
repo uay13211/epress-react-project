@@ -74,8 +74,10 @@ export function ProductDetailPage(props){
         <div className="w-75 mt-5 mx-auto detail-page">
           <div className="row">
             <div className="col-lg-6 col-md-12 ">
-              <div className='m-3'>
-                <img className="img-fluid detail-image" src={'/api/products/getImage/' + props.match.params.id} alt="product-img"/>
+              <div className="detail-img-section">
+                <div className='m-3 detail-img-inner-section'>
+                  <img className="img-fluid detail-image" src={'/api/products/getImage/' + props.match.params.id} alt="product-img"/>
+                </div>
               </div>
             </div>
             <div className='col-lg-6 col-md-12'>
