@@ -86,9 +86,9 @@ export function ProductDetailPage(props){
                 <span className='my-3 count-number'>{count}</span>
                 <button onClick={handleIncrement} className="btn btn-sm btn-warning m-3">+</button>
                 {count===0 ? <button className="btn btn-sm btn-secondary" disabled>Add To Cart</button>
-                           : <button onClick={()=>handleAddToCart(props.match.params.id, count, product.price)} className="btn btn-sm btn-warning">Add To Cart</button>}
-                <a href={updateLink} className="btn btn-sm btn-warning m-3">Change</a>
-                <button className="btn btn-sm btn-danger" onClick={deleteProduct}>Delete</button>
+                           : <button onClick={()=>handleAddToCart(props.match.params.id, count, product.price)} className="btn btn-sm btn-warning"><i class="fas fa-cart-plus"></i>Add To Cart</button>}
+                <a href={updateLink} className="btn btn-sm btn-warning m-3"><i class="fas fa-pen"></i>Change</a>
+                <button className="btn btn-sm btn-danger" onClick={deleteProduct}><i class="fas fa-trash-alt"></i>Delete</button>
                 <br/>
                 <p className="mt-3">{product.description}</p>
             </div>

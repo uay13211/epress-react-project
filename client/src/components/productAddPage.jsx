@@ -87,7 +87,7 @@ export function ProductAddPage(){
               <label>Description</label>
               <textarea rows="10" className="form-control" name="description" value={product.description} onChange={onChangeData} placeholder="Descripte the product" />
             </div>
-            <button type="submit" className="btn btn-block btn-warning my-3">Add</button>
+            <button type="submit" className="btn btn-block btn-warning my-3"><i class="fas fa-save fa-lg"></i>Add</button>
         </form>
         </div>
       </div>
