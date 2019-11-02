@@ -41,10 +41,13 @@ export function ProductDetailPage(props){
   }
 
   function deleteProduct(){
-    axios.delete("/api/products/delete/"+ props.match.params.id)
-    .then(res => res.status===200 ? setProduct({name:'', description:'', price:0}) : console.log('delete failed'))
-    .then(result => history.push("/products"))
-    .catch(err => console.log(err));
+    let question = window.confirm("Do you really want to delete this product?");
+    if (question){
+      axios.delete("/api/products/delete/"+ props.match.params.id)
+      .then(res => res.status===200 ? setProduct({name:'', description:'', price:0}) : console.log('delete failed'))
+      .then(result => history.push("/products"))
+      .catch(err => console.log(err));
+    }
   }
 
   // add to shopping cart

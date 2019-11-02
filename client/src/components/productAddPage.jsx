@@ -40,21 +40,24 @@ export function ProductAddPage(){
 
   function onSubmitProduct(e){
     e.preventDefault();
-    // post the product first
-    axios.post("/api/products/add", product)
-    .then(function(res){
-      if(res.status===200){
-        console.log('product added');
-        // post the image later on
-        axios.post("/api/products/uploadImage", {imageName: res.data+'.png', imageData: image})
-        .then(res => {
-          console.log(res.data);
-          history.push("/products");
-        })
-        .catch(err => console.log(err));
-      }
-    })
-    .catch(err => console.log(err));
+    let question = window.confirm("Do you want to add the new product?");
+    if(question){
+      // post the product first
+      axios.post("/api/products/add", product)
+      .then(function(res){
+        if(res.status===200){
+          console.log('product added');
+          // post the image later on
+          axios.post("/api/products/uploadImage", {imageName: res.data+'.png', imageData: image})
+          .then(res => {
+            console.log(res.data);
+            history.push("/products");
+          })
+          .catch(err => console.log(err));
+        }
+      })
+      .catch(err => console.log(err));
+    }
   }
 
     return(

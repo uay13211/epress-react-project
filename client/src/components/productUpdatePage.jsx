@@ -50,26 +50,29 @@ export function ProductUpdatePage(props){
 
   function onSubmitProduct(e){
     e.preventDefault();
-    const productToUpdated = {
-      name: product.name,
-      description:product.description,
-      price:product.price,
-      id: props.match.params.id
-    };
-    console.log(productToUpdated);
-    // update product data
-    axios.patch("/api/products/update", productToUpdated)
-    .then(function(res){
-      console.log(res.data);
-      // update product image
-      axios.post("/api/products/uploadImage", {imageName: props.match.params.id+'.png', imageData: image})
+    let question = window.confirm("Do you really want to update the product?");
+    if(question){
+      const productToUpdated = {
+        name: product.name,
+        description:product.description,
+        price:product.price,
+        id: props.match.params.id
+      };
+      console.log(productToUpdated);
+      // update product data
+      axios.patch("/api/products/update", productToUpdated)
       .then(function(res){
         console.log(res.data);
-        history.push("/products");
+        // update product image
+        axios.post("/api/products/uploadImage", {imageName: props.match.params.id+'.png', imageData: image})
+        .then(function(res){
+          console.log(res.data);
+          history.push("/products");
+        })
+        .catch(err => console.log(err));
       })
       .catch(err => console.log(err));
-    })
-    .catch(err => console.log(err));
+    }
   }
 
     return(
