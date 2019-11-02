@@ -86,6 +86,47 @@ div.file-upload-input{
   max-height: 60%
 }
 
+/* navbar */
+#main-icon{
+  font-family: 'Sacramento', cursive;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.navbar{
+  background: rgba(25,25,25,0.8);
+  color:rgba(255,193,7,1);
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.navbar .nav-item {
+  min-height: 30px;
+  min-width: 60px;
+  text-align: center;
+}
+.badge-notification {
+  position: relative;
+  margin-right: 10px;
+}
+.badge-notification[data-badge]::after {
+  font-family: 'Roboto', sans-serif;
+  content: attr(data-badge);
+	position: absolute;
+	top: -15px;
+	right: -12px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 20px;
+	height: 20px;
+  line-height: 22px;
+  font-size: 12px;
+  font-weight: 600;
+	border-radius: 50%;
+  background: #dc3545;
+  color: #fff;
+}
+
 /* login page */
 div.login-form {
   border-left: 1.5px solid;
@@ -114,45 +155,6 @@ div.login-form {
   display:inline-block;
   width: 15px;
   text-align: center;
-}
-
-/* navbar */
-#main-icon{
-  font-family: 'Sacramento', cursive;
-  font-size: 2rem;
-  font-weight: bolder;
-}
-.navbar{
-  height: 60px;
-  background: rgba(25,25,25,0.8);
-  color:rgba(255,193,7,1)
-}
-.navbar .nav-item {
-  min-height: 30px;
-  min-width: 60px;
-  text-align: center;
-}
-.badge-notification {
-  position: relative;
-  margin-right: 10px;
-}
-.badge-notification[data-badge]::after {
-  font-family: 'Roboto', sans-serif;
-  content: attr(data-badge);
-	position: absolute;
-	top: -15px;
-	right: -12px;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	width: 20px;
-	height: 20px;
-  line-height: 22px;
-  font-size: 12px;
-  font-weight: 600;
-	border-radius: 50%;
-  background: #dc3545;
-  color: #fff;
 }
 
  /* Product search page */

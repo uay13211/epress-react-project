@@ -26,10 +26,9 @@ export function Navbar() {
 
     return(
       <nav className="navbar navbar-expand-lg fixed-top">
-        <div className="container-fluid mx-5">
         <span className="navbar-brand" id="main-icon">DavidUay</span>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+          <i className="fas fa-bars fa-lg text-warning"></i>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
@@ -45,7 +44,6 @@ export function Navbar() {
             {state.autheticated ? <li className="nav-item mr-auto"><Link className="nav-link" to='/addProduct'><i className="fas fa-plus fa-lg"></i></Link></li>
                                 : state.autheticated}
           </ul>
-        </div>
         </div>
       </nav>
     )
