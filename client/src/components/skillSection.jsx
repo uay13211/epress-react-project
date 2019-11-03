@@ -31,27 +31,25 @@ export function SkillSection(){
                   <h3 className="font-weight-bold">CSS</h3>
                   <br/>
                   <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
-                  <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.</p>
+                  <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.</p>
                 </div>
                 <div className="carousel-item">
                   <h3 className="font-weight-bold">JavaScript</h3>
                   <br/>
                   <p>JavaScript, often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</p>
-                  <p>Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it, and major web browsers have a dedicated JavaScript engine to execute it.</p>
+                  <p>Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications.</p>
                 </div>
                 <div className="carousel-item">
                   <h3 className="font-weight-bold">ReactJS</h3>
                   <br/>
                   <p>React (also known as React.js or ReactJS) is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.</p>
-                  <p>React can be used as a base in the development of single-page or mobile applications, as it is optimal for fetching rapidly changing data that needs to be recorded. However, fetching data is only the beginning of what happens on a web page, which is why complex React applications usually require the use of additional libraries for state management, routing, and interaction with an API: Redux, React Router and axios are examples of such libraries.</p>
+                  <p>React can be used as a base in the development of single-page or mobile applications, as it is optimal for fetching rapidly changing data that needs to be recorded.</p>
                 </div>
                 <div className="carousel-item">
                   <h3 className="font-weight-bold">Node.js</h3>
                   <br/>
-                  <p>Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web application development around a single programming language, rather than different languages for server- and client-side scripts.</p>
-                  <p>Though .js is the standard filename extension for JavaScript code, the name "Node.js" does not refer to a particular file in this context and is merely the name of the product. Node.js has an event-driven architecture capable of asynchronous I/O.</p>
+                  <p>Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. </p>
                 </div>
-
                 <div className="carousel-item">
                   <h3 className="font-weight-bold">MongoDB</h3>
                   <br/>
@@ -62,13 +60,11 @@ export function SkillSection(){
                   <br/>
                   <p>GitHub is an American company that provides hosting for software development version control using Git.</p>
                   <p>It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.</p>
-                  <p>GitHub offers plans for free, professional, and enterprise accounts. Free GitHub accounts are commonly used to host open source projects.</p>
                 </div>
                 <div className="carousel-item">
                   <h3 className="font-weight-bold">Python</h3>
                   <br/>
                   <p>Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.</p>
-                  <p>Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.</p>
                 </div>
               </div>
             </div>
