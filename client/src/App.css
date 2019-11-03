@@ -287,11 +287,35 @@ div.file-upload-input{
   visibility:hidden;
 }
 
-/* login page */
-div.login-form {
-  border-left: 1.5px solid;
-  border-image-source: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(151, 151, 151, 0.9), rgba(255, 255, 255, 0));
-  border-image-slice: 20;
+/* login page && Sign Up page */
+.login-page{
+  display: flex;
+  height: 92vh;
+  width: 100%;
+  justify-content: center;
+}
+.login-card{
+  margin-top: 75px;
+  height: 60%;
+  width: 40%;
+}
+.login-card .card{
+  box-shadow: 1px 8px 20px grey;
+}
+.Register-card{
+  margin-top: 45px;
+  height: 60%;
+  width: 40%;
+}
+@media (max-width: 1028px){
+  .login-card{
+    height: 60%;
+    width: 75%;
+  }
+  .Register-card{
+    height: 60%;
+    width: 75%;
+  }
 }
 
 /* shopping cart page */

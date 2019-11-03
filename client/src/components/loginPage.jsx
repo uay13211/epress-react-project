@@ -67,37 +67,47 @@ export function Login() {
     }
 
       return(
-        <div className='w-75 mx-auto mt-5'>
-          <div className='w-75 mx-auto'>
-            <div>
-              <h1 className="text-center font-weight-bold">Login</h1>
-            </div>
-            <div className="row">
-              <div className="col-lg-6 mt-5 text-center">
-                <div className="p-5">
-                  <a className="btn btn-md w-75 btn-social btn-google my-2" href="/api/users/auth/google"><i className="fab fa-google"></i>Log in with Google</a>
-                  <a className="btn btn-md w-75 btn-social btn-facebook my-2" href="/api/users/auth/facebook"><i className="fab fa-facebook-f"></i>Log in with Facebook</a>
-                  <a className="btn btn-md w-75 btn-social btn-reddit my-2" href="/api/users/auth/reddit"><i className="fab fa-reddit"></i>Log in with Reddit</a>
-                  <a className="btn btn-md w-75 btn-social btn-github my-2" href="/api/users/auth/github"><i className="fab fa-github"></i>Log in with Github</a>
-                </div>
+        <div className='login-page'>
+          <div className='login-card'>
+            <div className="card">
+              <div className="card-header bg-warning">
+                <h2 className="text-center font-weight-bold">Login</h2>
               </div>
-              <div className="col-lg-6 mt-4 login-form">
-                <form className="p-5" onSubmit={submitData}>
-                  <div className='form-group'>
-                    <label className='form-text'>Username:</label>
-                    <input type='text' className="form-control" id="username-input" name="username" onChange={onChanegeData} value={data.username} placeholder="Username or Email" required autoFocus />
-                    {errorMessage.usernameError ? <div className="invalid-feedback">{errorMessage.usernameError}</div> : errorMessage.usernameError}
+              <div className='card-body'>
+                  <div className="login-form">
+                    <form onSubmit={submitData}>
+                      <div className='form-group'>
+                        <label className='form-text'>Username:</label>
+                        <input type='text' className="form-control" id="username-input" name="username" onChange={onChanegeData} value={data.username} placeholder="Username or Email" required autoFocus />
+                        {errorMessage.usernameError ? <div className="invalid-feedback">{errorMessage.usernameError}</div> : errorMessage.usernameError}
+                      </div>
+                      <div className='form-group'>
+                        <label className='form-text'>Password:</label>
+                        <input type='password' className="form-control" id="password-input" name="password" onChange={onChanegeData} value={data.password} placeholder="Password" required/>
+                        {errorMessage.passwordError ? <div className="invalid-feedback">{errorMessage.passwordError}</div> : errorMessage.passwordError}
+                      </div>
+                      <input type='submit' value='Login' className='btn btn-block btn-warning btn-lg my-4' />
+                    </form>
                   </div>
-                  <div className='form-group'>
-                    <label className='form-text'>Password:</label>
-                    <input type='password' className="form-control" id="password-input" name="password" onChange={onChanegeData} value={data.password} placeholder="Password" required/>
-                    {errorMessage.passwordError ? <div className="invalid-feedback">{errorMessage.passwordError}</div> : errorMessage.passwordError}
-                  </div>
-                  <input type='submit' value='Log in' className='btn btn-block btn-primary btn-lg mt-4' />
-                </form>
+                  <hr/>
+                  <h5 className="text-center py-2">Or...</h5>
+                    <div className="row">
+                      <div className="col-6 pt-2">
+                        <a className="btn btn-md w-100 btn-social btn-google" href="/api/users/auth/google"><i className="fab fa-google"></i>Login with Google</a>
+                      </div>
+                      <div className="col-6 pt-2">
+                        <a className="btn btn-md w-100 btn-social btn-facebook" href="/api/users/auth/facebook"><i className="fab fa-facebook-f"></i>Login with Facebook</a>
+                      </div>
+                      <div className="col-6 pt-2">
+                        <a className="btn btn-md w-100 btn-social btn-reddit" href="/api/users/auth/reddit"><i className="fab fa-reddit"></i>Login with Reddit</a>
+                      </div>
+                      <div className="col-6 pt-2">
+                        <a className="btn btn-md w-100 btn-social btn-github" href="/api/users/auth/github"><i className="fab fa-github"></i>Login with GitHub</a>
+                      </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       );
 }

@@ -74,42 +74,52 @@ export function Register () {
   }
 
     return(
-      <div className='w-75 mx-auto mt-5'>
-        <div className='w-75 mx-auto'>
-          <div>
-            <h1 className="text-center font-weight-bold">Sign Up</h1>
-          </div>
-          <div className="row">
-            <div className="col-lg-6 mt-5 text-center">
-              <div className="p-5">
-                <a className="btn btn-md w-75 btn-social btn-google my-2" href="/users/auth/google"><i className="fab fa-google"></i>Sign Up with Google</a>
-                <a className="btn btn-md w-75 btn-social btn-facebook my-2" href="/users/auth/facebook"><i className="fab fa-facebook-f"></i>Sign Up with Facebook</a>
-                <a className="btn btn-md w-75 btn-social btn-reddit my-2" href="/users/auth/reddit"><i className="fab fa-reddit"></i>Sign Up with Reddit</a>
-                <a className="btn btn-md w-75 btn-social btn-github my-2" href="/users/auth/github"><i className="fab fa-github"></i>Sign Up with Github</a>
-              </div>
+      <div className='login-page'>
+        <div className='Register-card'>
+          <div className="card">
+            <div className="card-header bg-warning">
+              <h2 className="text-center font-weight-bold">Sign Up</h2>
             </div>
-            <div className="col-lg-6 mt-4 login-form">
-              <form className="p-5" onSubmit={submitData}>
-                <div className='form-group'>
-                  <label className='form-text'>Username:</label>
-                  <input type='text' className="form-control" id="username-input" name="username" onChange={onChanegeData} value={data.username} placeholder="Username" required autoFocus />
-                  {errorMessage.usernameError ? <div className="invalid-feedback">{errorMessage.usernameError}</div> : errorMessage.usernameError}
+            <div className='card-body'>
+                <div className="login-form">
+                  <form onSubmit={submitData}>
+                    <div className='form-group'>
+                      <label className='form-text'>Username:</label>
+                      <input type='text' className="form-control" id="username-input" name="username" onChange={onChanegeData} value={data.username} placeholder="Username" required autoFocus />
+                      {errorMessage.usernameError ? <div className="invalid-feedback">{errorMessage.usernameError}</div> : errorMessage.usernameError}
+                    </div>
+                    <div className='form-group'>
+                      <label className='form-text'>Email:</label>
+                      <input type='email' className="form-control" id="email-input" name="email" onChange={onChanegeData} value={data.email} placeholder="Email" required />
+                      {errorMessage.emailError ? <div className="invalid-feedback">{errorMessage.emailError}</div> : errorMessage.emailError}
+                    </div>
+                    <div className='form-group'>
+                      <label className='form-text'>Password:</label>
+                      <input type='password' className="form-control" id="password-input" name="password" onChange={onChanegeData} value={data.password} placeholder="Password" required/>
+                      {errorMessage.passwordError ? <div className="invalid-feedback">{errorMessage.passwordError}</div> : errorMessage.passwordError}
+                    </div>
+                    <input type='submit' value='Sign Up' className='btn btn-block btn-warning btn-lg my-4' />
+                  </form>
                 </div>
-                <div className='form-group'>
-                  <label className='form-text'>Email:</label>
-                  <input type='email' className="form-control" id="email-input" name="email" onChange={onChanegeData} value={data.email} placeholder="Email" required />
-                  {errorMessage.emailError ? <div className="invalid-feedback">{errorMessage.emailError}</div> : errorMessage.emailError}
-                </div>
-                <div className='form-group'>
-                  <label className='form-text'>Password:</label>
-                  <input type='password' className="form-control" id="password-input" name="password" onChange={onChanegeData} value={data.password} placeholder="Password" required/>
-                  {errorMessage.passwordError ? <div className="invalid-feedback">{errorMessage.passwordError}</div> : errorMessage.passwordError}
-                </div>
-                <input type='submit' value='Sign Up' className='btn btn-block btn-primary btn-lg mt-4' />
-              </form>
+                <hr/>
+                <h5 className="text-center py-2">Or...</h5>
+                  <div className="row">
+                    <div className="col-6 pt-2">
+                      <a className="btn btn-md w-100 btn-social btn-google" href="/api/users/auth/google"><i className="fab fa-google"></i>Sign Up with Google</a>
+                    </div>
+                    <div className="col-6 pt-2">
+                      <a className="btn btn-md w-100 btn-social btn-facebook" href="/api/users/auth/facebook"><i className="fab fa-facebook-f"></i>Sign Up with Facebook</a>
+                    </div>
+                    <div className="col-6 pt-2">
+                      <a className="btn btn-md w-100 btn-social btn-reddit" href="/api/users/auth/reddit"><i className="fab fa-reddit"></i>Sign Up with Reddit</a>
+                    </div>
+                    <div className="col-6 pt-2">
+                      <a className="btn btn-md w-100 btn-social btn-github" href="/api/users/auth/github"><i className="fab fa-github"></i>Sign Up with GitHub</a>
+                    </div>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     )
   }
